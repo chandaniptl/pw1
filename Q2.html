@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q2</title>
+    <style>
+        header {
+            background-color: rgb(3, 68, 3);
+        }
+
+        body {
+            background-color: rgb(196, 233, 173);
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            align-items: center;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            background-color: #0d4107;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+
+        header img {
+            height: 100px;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #ebe6e6;
+        }
+
+        h1 {
+            text-align: left;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+
+        p {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+
+        button {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            text-align: center;
+            background-color: rgb(152, 173, 134);
+        }
+
+        h3 {
+            text-align: center;
+        }
+
+        .footer {
+            background-color: rgb(13, 75, 16);
+        }
+
+
+
+        .container {
+            text-align: center;
+            /* Align content inside container */
+        }
+
+        .row {
+            display: flex;
+            /* Use flexbox for row layout */
+        }
+
+        .column {
+            margin: 120px;
+            /* Add spacing between columns */
+        }
+        
+    </style>
+</head>
+
+<body>
+    <div>
+        <header>
+            <img src="data:image/jpeg;base64,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"
+                height="200px" width="200px">
+            <nav>
+                <ul>
+                    <li>
+                        <a href="./Home.html"> Home </a>
+                    </li>
+                    <li>
+                        <a href=""> About </a>
+                    </li>
+                    <li>
+                        <a href="">Roadmap</a>
+                    </li>
+                    <li>
+                        <a href="">Collection</a>
+                    </li>
+                    <li>
+                        <a href="">Shop</a>
+                    </li>
+                    <li>
+                        <a href="">Page</a>
+                    </li>
+                    <li>
+                        <a href="">Contact</a>
+                    </li>
+                    <button style="height: 40px; width:100px">Join Discard</button>
+                </ul>
+            </nav>
+        </header>
+    </div>
+    <img src="https://th.bing.com/th/id/OIP.ue85Y_VtQs1B4OHAayVDAAHaDu?w=350&h=176&c=7&r=0&o=5&pid=1.7" height="300px"
+        width="500px" align="right">
+
+    <h1 style="background-color: #5c8657;"> Discover Rare Digital Art <br> And Collection NFTs</h1>
+    <p>Puma SE is a German multinational corporation who design and manufacture athletic and <br>casual footwear,
+        apparel, and accessories, headquartered in Herzogenaurach, Bavaria, Germany.<br>Puma is the third largest
+        sportswear manufacturer in the world.[6] The company was founded in<br> 1948 by Rudolf Dassler (1898–1974). In
+        1924, Rudolf and his brother Adolf "Adi" Dassler had jointly <br>formed the company Gebrüder Dassler Schuhfabrik
+        ('Dassler Brothers Shoe Factory'). </p>
+
+    <button style="height: 50px; width:200px">Show Prouduct</button>
+    <button style="height: 50px; width:200px">Product Details</button><br><br>
+
+    <div class="puma">
+
+        <h1 style="display: inline-block;">520+</h1>
+        <p style="display: inline-block;">Shoes</p>
+
+        <h1 style="display: inline-block;">16K+</h1>
+        <p style="display: inline-block;">T-shirts</p>
+
+        <h1 style="display: inline-block;">105+</h1>
+        <p style="display:inline-block ;">Bags</p>
+    </div>
+
+    <div class="container">
+        <!-- <h4 style="background-color: #5c8657; height: 20px; ">Other Products</h4> -->
+        <div class="row">
+            <div class="column">
+                <img src="https://th.bing.com/th/id/OIP.Xk6Pjnjibmk5vh2aU1XpMwHaEX?w=311&h=183&c=7&r=0&o=5&pid=1.7"
+                    height="200px" width="200px">
+            </div>
+            <div class="column">
+                <img src="https://th.bing.com/th?id=OIP.rFyoq9Bd9m1Q453R82HJbgHaGB&w=277&h=225&c=8&rs=1&qlt=90&o=6&pid=3.1&rm=2"
+                    height="200px" width="200px">
+            </div>
+            <div class="column">
+                <img src="https://1.bp.blogspot.com/-6Xl00nsgw74/URWM4m1IuAI/AAAAAAAAF-8/ei045OKoM_o/s1600/Logo+Adidas.jpg"
+                    height="200px" width="200px">
+            </div>
+            <div class="column">
+                <img src="https://th.bing.com/th/id/OIP.8w2O7EGo6frTK1Fi0h5rKAHaEK?w=301&h=180&c=7&r=0&o=5&pid=1.7"
+                    height="200px" width="200px">
+            </div>
+        </div>
+    </div>
+
+
+    <img src="https://i.etsystatic.com/16612189/r/il/f91384/2801844088/il_1588xN.2801844088_eyhf.jpg" height="400px"
+        width="400px" align="left"><br>
+    <h4 style="text-align: center; background-color: #5c8657; height: 20px;">T-shirts</h4>
+    <h1 style="text-align: center; background-color: #5c8657; height: 50px">T-shirsts Collections</h1>
+    <p style="text-align: center;">PUMA is one of the world’s leading Sports Brands, designing, developing, selling and marketing footwear, apparel
+        and accessories.<br> For 70 years, PUMA has established a history of making fast product designs for the fastest
+        athletes on the planet. PUMA offers <br>performance and sport-inspired lifestyle products in categories such as
+        Running and Training, Motorsports, Football, Badminton<br> and Basketball. Sport style categories from PUMA
+        include Sneakers, Slip-ons and Loungewear. It engages in exciting collaborations<br> with renowned design brands
+        to bring innovative and fast designs to the sports and sports-inspired lifestyle world. The company
+        <br>distributes its products in more than 120 countries and is headquartered in Herzogenaurach/Germany.</p>
+        <center>
+            <button style="text-align: center; height: 50px; width: 200px;">View Tshirts</button>
+        </center><br><br><br><br><br><br><br><br><br>
+
+    <div class="container">
+        <h4 style="text-align: center; background-color: #5c8657; height: 20px;" >Story</h4>
+        <h1 style="text-align: center; background-color: #5c8657; height: 50px;">Puma Story</h1>
+        <p style="text-align: center;">PUMA is relentlessly pushing sports and culture forward by creating the fastest
+            <br>products for the world’s fastest athletes. Since 1948, PUMA has drawn strength and credibility from its
+            heritage in sports. </p>
+        <div class="row">
+            <div class="column">
+                <img src="https://th.bing.com/th/id/OIP.LG200gHrmjVjD2rrsS8OfgHaE9?w=231&h=180&c=7&r=0&o=5&pid=1.7"
+                    height="200px" width="200px">
+            </div>
+            <div class="column">
+                <img src="https://th.bing.com/th?id=OIP.uwwVUfOvmCm9b97ylJPVoAHaFj&w=288&h=216&c=8&rs=1&qlt=90&o=6&pid=3.1&rm=2"
+                    height="200px" width="200px">
+            </div>
+            <div class="column">
+                <img src="https://th.bing.com/th?id=OIP.1kKodWZ_dR-khMNEBxVvtwHaE8&w=306&h=204&c=8&rs=1&qlt=90&o=6&pid=3.1&rm=2"
+                    height="200px" width="200px">
+            </div>
+            <div class="column">
+                <img src="https://th.bing.com/th/id/OIP._XbbtaTwJU8MufQozDAsWwHaFj?w=219&h=180&c=7&r=0&o=5&pid=1.7"
+                    height="200px" width="200px">
+            </div>
+        </div>
+    </div>
+    <center>
+        <button style="text-align: center; height: 50px; width: 200px; font-family: Verdana, Geneva, Tahoma, sans-serif;">View More Story</button>
+    </center>
+
+    <div class="container">
+        <h4 style="text-align: center; background-color: #5c8657; height: 20px;">Blog</h4>
+        <h1 style="text-align: center ; background-color: #5c8657;">Our Blod & News</h1>
+        <p style="text-align: center;">WHEN YOU’RE FAST, YOU SET THE PACE. THE GAME MOVES SLOWER. THE BALL LOOKS BIGGER.
+            <br>THIS IS HOW THE GREATS CHANGE THE GAME. THIS IS HOW THEY WIN. PUMA INVITES YOU TO BREAK THROUGH YOUR
+            LIMITS,<br> UNLOCK TRANSCENDENT ATHLETIC PERFORMANCE, AND SEE THE GAME LIKE WE DO: FOREVER. FASTER.
+        </p>
+        <div class="row">
+            <div class="column">
+                <img src="https://about.puma.com/sites/default/files/styles/dd_hero_ultra/public/media/hero/images/header-puma.webp?itok=JMeuqgSz"
+                    height="200px" width="200px">
+            </div>
+            <div class="column">
+                <img src="https://about.puma.com/sites/default/files/styles/dd_preview_slider/public/media/images/tommie-smith.webp?itok=Zrfy8b6i"
+                    height="200px" width="200px">
+            </div>
+            <div class="column">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR14tb5AtJTkDWLNrt3ZLqSxrgM7XBR3y5ldQ&s"
+                    height="200px" width="200px">
+            </div>
+            <div class="column">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRUXsWjOgeyEMMCEUr7eA-UTOEilO8TAEfEDQ&s"
+                    height="200px" width="200px">
+            </div>
+        </div>
+    </div>
+    <center>
+        <button style="text-align: center; height: 50px; width: 200px; font-family: Verdana, Geneva, Tahoma, sans-serif;">View More News</button>
+    </center>
+
+</body>
+
+<footer class="footer">
+    <div class="container">
+        <div class="foot_menu"></div>
+        <h4>NEWSLETTER</h4>
+        <h1 style="text-align: center;">Join Our NewsLetter</h1>
+        <h5>Eget nulla phasellus odio sit porttitor enatibus allquam</h5>
+
+        <input type="email" id="email" name="email" placeholder="Email Address" style="font-style: normal; height: 20px; width:200px">
+        <button style="background-color: antiquewhite; height: 20px; width: 100px;" >Subscribe</button><br><br>
+
+        <img src="https://th.bing.com/th?id=OIP.QH3rKRYQPcM3xxmjubYmaAHaHW&w=250&h=249&c=8&rs=1&qlt=90&o=6&pid=3.1&rm=2"
+            height="40px" width="40px">
+        <img src="https://th.bing.com/th?id=OIP.LwdzUUvz0T8fDEe4Q-TG3AHaHa&w=250&h=250&c=8&rs=1&qlt=90&o=6&pid=3.1&rm=2"
+            height="40px" width="40px">
+        <img src="https://th.bing.com/th?id=OIP.jqIMshOgmKwkf3dM9DEwvwHaHM&w=253&h=246&c=8&rs=1&qlt=90&o=6&pid=3.1&rm=2"
+            height="40px" width="40px">
+        <img src="https://th.bing.com/th?id=OIP.gc6m_EejGd5q1JwA7aMJ5AHaFL&w=299&h=208&c=8&rs=1&qlt=90&o=6&pid=3.1&rm=2"
+            height="40px" width="40px">
+
+    </div>
+    </div>
+
+</footer>
+</center>
+<!-- <h4 style="display: inline-block;">CopyRight@puma| All righta reserved</h4> -->
+
+<a href="" style="display: inline-block;">Privacy Policy</a>
+<a href="" style="display: inline-block;">Cookies</a>
+<a href="" style="display: inline-block; " >Terms & Conditions</a>
+
+
+
+
+</html>
